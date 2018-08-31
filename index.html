@@ -29,22 +29,18 @@
 
         <!-- ARオブジェクトを描画するシーンの定義 -->
         <a-scene stats embedded arjs='debugUIEnabled: false; sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
-            <!-- ARマーカに対する描画オブジェクト -->
-            <a-marker preset="custom" type="pattern" url="static/marker/cone.patt">
+     
+            <!-- cone marker -->
+            <a-marker preset="custom" type="pattern" url="static/marker/circle.patt">
                 <!-- オブジェクト1つめの配置 -->
-                <a-obj-model src="#cone_obj" mtl="#cone_mtl" position="0 0 0" rotation="-100 0 0" scale="0.05 0.05 0.05" visible="true"></a-obj-model>
-                <!-- a-entityタグでオブジェクトやアニメーションの定義をまとめる -->
-                
-                <a-entity>
-                    <a-obj-model src="#cone_obj" mtl="#cone_mtl" position="-0.3 0 0" rotation="-90 0 0" scale="1.0 1.0 1.0" visible="true"></a-obj-model>
-                </a-entity>
+                <a-obj-model src="#cone_obj" mtl="#cone_mtl" position="0 0 0" rotation="-100 0 0" scale="1.0 1.0 1.0" visible="true"></a-obj-model>
                 <!-- テキストも描画可能 -->
                 <a-text value="Warning!!" position='-0.8 1.0 -0.1' rotation="0 0 0" scale="1.5 1.5 1.5" color="red"></a-text>
             </a-marker>
     
             <!-- circle marker-->
-            <a-marker preset="custom" type="pattern" url="static/marker/circle.patt">
-                <a-box position="0 0.5 0" wireframe="true"></a-box>
+            <a-marker preset="custom" type="pattern" url="static/marker/cone.patt">
+                <a-box position="0 0.5 0" scale="0.5 2.0 0.5" wireframe="true"></a-box>
             </a-marker>
 
             <!-- カメラオブジェクトの配置 -->
