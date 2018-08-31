@@ -16,30 +16,22 @@
         
         <!--cone-->
         <a-assets>
-            <a-asset-item id="cone1_mtl" src="./static/models/cone1/cone1_obj.mtl"></a-asset-item>
-            <a-asset-item id="cone1_obj" src="./static/models/cone1/cone1_obj.obj"></a-asset-item>
+            <!--<a-asset-item id="cone_mtl" src="./static/models/cone/cone.mtl"></a-asset-item>-->
+            <a-asset-item id="cone_obj" src="./static/models/cone/cone.obj"></a-asset-item>
         </a-assets>
-        
-        <!--cone2-->
-        <a-assets>
-            <a-asset-item id="cone2_mtl" src="./static/models/cone2/Models and Textures/cone2.mtl"></a-asset-item>
-            <a-asset-item id="cone2_obj" src="./static/models/cone2/Models and Textures/cone2.obj"></a-asset-item>
-        </a-assets>
-
 
         <!-- ARオブジェクトを描画するシーンの定義 -->
         <a-scene stats embedded arjs='debugUIEnabled: false; sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
      
             <!-- cone marker -->
             <a-marker preset="custom" type="pattern" url="./static/marker/circle.patt">
-                <!-- オブジェクト1つめの配置 -->
-                <!--<a-obj-model src="#cone2_obj" mtl="#cone2_mtl" position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.5" visible="true" color="red"></a-obj-model>-->
-                <a-obj-model src="#cone2_obj" position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.5" visible="true" color="red"></a-obj-model>
+                <a-obj-model src="#cone_obj" position="0 0 0" rotation="0 0 0" scale="0.4 0.4 0.4" visible="true" color="red"></a-obj-model>
             </a-marker>
     
             <!-- circle marker-->
             <a-marker preset="custom" type="pattern" url="./static/marker/cone.patt">
-                <a-box position="0 0.5 0" scale="1.0 5.0 1.0" wireframe="false" color="orange"></a-box>
+                <!--<a-box position="0 0.5 0" scale="1.0 5.0 1.0" wireframe="false" color="orange"></a-box>-->
+                <a-obj-model src="#cone_obj" position="0 0 0" rotation="0 0 0" scale="0.4 0.4 0.4" visible="true" color="blue"></a-obj-model>
             </a-marker>
 
             <!-- カメラオブジェクトの配置 -->
